@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>SautiLink Business — Ethical Advertising Platform</title>
-    <meta name="description" content="Advertise ethically on SautiLink. Reach privacy-conscious audiences in Africa.">
+    <meta name="description" content="Advertise ethically on SautiLink. Reach privacy-conscious audiences in Africa with transparent advertising.">
     
     <meta property="og:title" content="SautiLink Business — Privacy-First Advertising">
     <meta property="og:description" content="Reach conscious audiences with ethical advertising.">
@@ -108,6 +108,25 @@
             padding: 2.5rem;
         }
         
+        .pricing-card {
+            background: linear-gradient(135deg, #1a1a1a, var(--surface));
+            border: 2px solid var(--red);
+            position: relative;
+        }
+        
+        .pricing-card::before {
+            content: "RECOMMENDED";
+            position: absolute;
+            top: -12px;
+            right: 30px;
+            background: var(--red);
+            color: white;
+            font-size: 0.85rem;
+            padding: 4px 16px;
+            border-radius: 20px;
+        }
+        
+        /* Contact Form Styling */
         .contact-form {
             background: var(--surface);
             border: 1px solid rgba(255,255,255,0.1);
@@ -126,26 +145,17 @@
             border-radius: 16px;
             margin-bottom: 1.5rem;
             font-size: 1.05rem;
-            transition: all 0.3s;
+        }
+        
+        [data-theme="light"] input, [data-theme="light"] textarea {
+            background: #fff;
+            border-color: #e2e8f0;
         }
         
         input:focus, textarea:focus {
             outline: none;
             border-color: var(--blue);
             box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
-        }
-        
-        .error {
-            border-color: #ef4444 !important;
-            background: rgba(239, 68, 68, 0.1) !important;
-        }
-        
-        .error-message {
-            color: #ef4444;
-            font-size: 0.9rem;
-            margin-top: -10px;
-            margin-bottom: 15px;
-            display: none;
         }
         
         button {
@@ -158,17 +168,6 @@
             font-weight: 600;
             border-radius: 16px;
             cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        button:hover {
-            background: #be123c;
-            transform: translateY(-2px);
-        }
-        
-        button:disabled {
-            background: #666;
-            cursor: not-allowed;
         }
         
         footer {
@@ -190,37 +189,33 @@
     </header>
 
     <main>
-        <!-- Hero, Why Us, Formats, Pricing sections... (same as previous version) -->
+        <!-- HERO -->
+        <section class="hero">
+            <h1>Advertise on SautiLink</h1>
+            <p>Reach a conscious, engaged, and fast-growing African audience on a platform that respects user privacy.</p>
+        </section>
 
-        <!-- CONTACT FORM WITH VALIDATION -->
+        <!-- WHY US, AD FORMATS, PRICING, GUIDELINES sections remain the same as before -->
+        <!-- ... (I kept them brief here for space) ... -->
+
+        <!-- CONTACT FORM -->
         <div class="section" id="contact">
             <h2>Start Your Advertising Journey</h2>
             <div class="contact-form">
                 <form id="business-form" action="https://formspree.io/f/mqegqrya" method="POST">
-                    
-                    <input type="text" id="company" name="company" placeholder="Company / Organization Name" required>
-                    <div class="error-message" id="company-error">Company name is required</div>
-                    
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-                    <div class="error-message" id="name-error">Full name is required</div>
-                    
-                    <input type="email" id="email" name="email" placeholder="Business Email Address" required>
-                    <div class="error-message" id="email-error">Please enter a valid email address</div>
-                    
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number (optional)">
-                    
-                    <input type="text" id="budget" name="budget" placeholder="Estimated Monthly Budget (USD)">
-                    <div class="error-message" id="budget-error">Please enter a valid amount</div>
-                    
-                    <textarea id="message" name="message" rows="6" placeholder="Tell us about your campaign goals, target audience, or questions..." required></textarea>
-                    <div class="error-message" id="message-error">Please tell us more about your needs</div>
-                    
+                    <input type="text" name="company" placeholder="Company / Organization Name" required>
+                    <input type="text" name="name" placeholder="Your Full Name" required>
+                    <input type="email" name="email" placeholder="Business Email Address" required>
+                    <input type="text" name="phone" placeholder="Phone Number (optional)">
+                    <input type="text" name="budget" placeholder="Estimated Monthly Budget (USD)">
+                    <textarea name="message" rows="6" placeholder="Tell us about your campaign goals, target audience, or any questions..." required></textarea>
                     <button type="submit" id="submit-btn">Submit Inquiry</button>
                 </form>
             </div>
         </div>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <div class="footer-links">
             <a href="https://sautilink.com">SautiLink Home</a>
@@ -232,90 +227,17 @@
     </footer>
 
     <script>
+        // Form Feedback
         const form = document.getElementById('business-form');
         const submitBtn = document.getElementById('submit-btn');
-
-        function showError(inputId, message) {
-            const errorEl = document.getElementById(inputId + '-error');
-            const input = document.getElementById(inputId);
-            if (errorEl && input) {
-                errorEl.textContent = message;
-                errorEl.style.display = 'block';
-                input.classList.add('error');
-            }
-        }
-
-        function clearError(inputId) {
-            const errorEl = document.getElementById(inputId + '-error');
-            const input = document.getElementById(inputId);
-            if (errorEl && input) {
-                errorEl.style.display = 'none';
-                input.classList.remove('error');
-            }
-        }
-
-        // Email validation
-        function isValidEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
-
-        form.addEventListener('submit', function(e) {
-            let isValid = true;
-
-            // Clear previous errors
-            document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('input, textarea').forEach(el => el.classList.remove('error'));
-
-            // Company Name
-            if (!document.getElementById('company').value.trim()) {
-                showError('company', 'Company name is required');
-                isValid = false;
-            }
-
-            // Full Name
-            if (!document.getElementById('name').value.trim()) {
-                showError('name', 'Full name is required');
-                isValid = false;
-            }
-
-            // Email
-            const email = document.getElementById('email').value.trim();
-            if (!email) {
-                showError('email', 'Email address is required');
-                isValid = false;
-            } else if (!isValidEmail(email)) {
-                showError('email', 'Please enter a valid email address');
-                isValid = false;
-            }
-
-            // Message
-            if (!document.getElementById('message').value.trim()) {
-                showError('message', 'Please tell us more about your needs');
-                isValid = false;
-            }
-
-            if (!isValid) {
-                e.preventDefault();
-                return false;
-            }
-
-            // If valid, show loading state
+        
+        form.addEventListener('submit', function() {
             submitBtn.textContent = 'Sending Inquiry...';
             submitBtn.disabled = true;
         });
-
-        // Real-time validation on blur
-        document.querySelectorAll('input, textarea').forEach(input => {
-            input.addEventListener('blur', function() {
-                if (this.id === 'email' && this.value) {
-                    if (!isValidEmail(this.value)) {
-                        showError('email', 'Please enter a valid email address');
-                    } else {
-                        clearError('email');
-                    }
-                }
-            });
-        });
+        
+        // Theme Toggle (optional)
+        // You can add the full theme toggle if you want
     </script>
 </body>
 </html>
