@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SautiLink Business — Ethical Advertising Platform</title>
+    <meta name="description" content="Advertise ethically on SautiLink. Reach privacy-conscious audiences in Africa.">
+    
+    <meta property="og:title" content="SautiLink Business — Privacy-First Advertising">
+    <meta property="og:description" content="Reach conscious audiences with ethical advertising.">
+    <meta property="og:url" content="https://business.sautilink.com">
+    <meta property="og:image" content="https://raw.githubusercontent.com/sautilink/sautilink/main/assets/logo.png">
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/sautilink/sautilink/main/assets/logo.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --red: #e11d48;
+            --blue: #2563eb;
+            --bg: #0a0a0a;
+            --surface: #111111;
+            --text: #f8fafc;
+            --text-secondary: #cbd5e1;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            background: rgba(10,10,10,0.85);
+        }
+        
+        .nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.85rem;
+            letter-spacing: -0.04em;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        main { padding-top: 100px; }
+        
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(225,29,72,0.08), transparent);
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+        }
+        
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+        }
+        
+        .contact-form {
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 700px;
+            margin: 4rem auto 0;
+        }
+        
+        input, textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: var(--text);
+            padding: 16px 20px;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+        }
+        
+        .error {
+            border-color: #ef4444 !important;
+            background: rgba(239, 68, 68, 0.1) !important;
+        }
+        
+        .error-message {
+            color: #ef4444;
+            font-size: 0.9rem;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        
+        button {
+            width: 100%;
+            background: var(--red);
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #be123c;
+            transform: translateY(-2px);
+        }
+        
+        button:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body data-theme="dark">
+    <header>
+        <div class="nav">
+            <a href="https://sautilink.com" class="logo">SautiLink</a>
+            <div>
+                <a href="#contact" style="background:var(--red); color:white; padding:12px 28px; border-radius:12px; text-decoration:none; font-weight:600;">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero, Why Us, Formats, Pricing sections... (same as previous version) -->
+
+        <!-- CONTACT FORM WITH VALIDATION -->
+        <div class="section" id="contact">
+            <h2>Start Your Advertising Journey</h2>
+            <div class="contact-form">
+                <form id="business-form" action="https://formspree.io/f/mqegqrya" method="POST">
+                    
+                    <input type="text" id="company" name="company" placeholder="Company / Organization Name" required>
+                    <div class="error-message" id="company-error">Company name is required</div>
+                    
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    <div class="error-message" id="name-error">Full name is required</div>
+                    
+                    <input type="email" id="email" name="email" placeholder="Business Email Address" required>
+                    <div class="error-message" id="email-error">Please enter a valid email address</div>
+                    
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number (optional)">
+                    
+                    <input type="text" id="budget" name="budget" placeholder="Estimated Monthly Budget (USD)">
+                    <div class="error-message" id="budget-error">Please enter a valid amount</div>
+                    
+                    <textarea id="message" name="message" rows="6" placeholder="Tell us about your campaign goals, target audience, or questions..." required></textarea>
+                    <div class="error-message" id="message-error">Please tell us more about your needs</div>
+                    
+                    <button type="submit" id="submit-btn">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://sautilink.com">SautiLink Home</a>
+            <a href="https://sautilink.com/contact.html">General Contact</a>
+            <a href="https://sautilink.com/privacy.html">Privacy</a>
+            <a href="https://sautilink.com/terms.html">Terms</a>
+        </div>
+        <p>&copy; 2026 SautiLink Corporation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('business-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        function showError(inputId, message) {
+            const errorEl = document.getElementById(inputId + '-error');
+            const input = document.getElementById(inputId);
+            if (errorEl && input) {
+                errorEl.textContent = message;
+                errorEl.style.display = 'block';
+                input.classList.add('error');
+            }
+        }
+
+        function clearError(inputId) {
+            const errorEl = document.getElementById(inputId + '-error');
+            const input = document.getElementById(inputId);
+            if (errorEl && input) {
+                errorEl.style.display = 'none';
+                input.classList.remove('error');
+            }
+        }
+
+        // Email validation
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        form.addEventListener('submit', function(e) {
+            let isValid = true;
+
+            // Clear previous errors
+            document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('input, textarea').forEach(el => el.classList.remove('error'));
+
+            // Company Name
+            if (!document.getElementById('company').value.trim()) {
+                showError('company', 'Company name is required');
+                isValid = false;
+            }
+
+            // Full Name
+            if (!document.getElementById('name').value.trim()) {
+                showError('name', 'Full name is required');
+                isValid = false;
+            }
+
+            // Email
+            const email = document.getElementById('email').value.trim();
+            if (!email) {
+                showError('email', 'Email address is required');
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                showError('email', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            // Message
+            if (!document.getElementById('message').value.trim()) {
+                showError('message', 'Please tell us more about your needs');
+                isValid = false;
+            }
+
+            if (!isValid) {
+                e.preventDefault();
+                return false;
+            }
+
+            // If valid, show loading state
+            submitBtn.textContent = 'Sending Inquiry...';
+            submitBtn.disabled = true;
+        });
+
+        // Real-time validation on blur
+        document.querySelectorAll('input, textarea').forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.id === 'email' && this.value) {
+                    if (!isValidEmail(this.value)) {
+                        showError('email', 'Please enter a valid email address');
+                    } else {
+                        clearError('email');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
