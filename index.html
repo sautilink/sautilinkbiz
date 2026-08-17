@@ -14,13 +14,10 @@
     
     <link rel="icon" href="https://raw.githubusercontent.com/sautilink/sautilink/main/assets/logo.png" type="image/png">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --red: #e11d48;
+            --red: #2563eb;
             --blue: #2563eb;
             --bg: #0a0a0a;
             --surface: #111111;
@@ -31,7 +28,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+            font-family: var(--font-primary);
             background: var(--bg);
             color: var(--text);
             line-height: 1.7;
@@ -68,7 +65,7 @@
         .hero {
             text-align: center;
             padding: 7rem 2rem 5rem;
-            background: linear-gradient(135deg, rgba(225,29,72,0.12), transparent);
+            background: linear-gradient(135deg, rgba(37,99,235,0.12), transparent);
         }
         
         .hero h1 {
@@ -147,6 +144,9 @@
             color: var(--text-secondary);
         }
     </style>
+    <link rel="preload" href="/assets/fonts/lora/Lora-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/zalando-sans-semiexpanded/ZalandoSansSemiExpanded-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/brand/system.css">
 </head>
 <body data-theme="dark">
     <header>
