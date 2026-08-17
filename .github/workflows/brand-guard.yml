@@ -1,0 +1,34 @@
+name: SautiLink Brand Guard
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify-brand:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify brand assets and page
+        shell: python
+        run: |
+          from pathlib import Path
+          required=["assets/fonts/lora/Lora-Variable.woff2","assets/fonts/lora/Lora-VariableItalic.woff2","assets/fonts/lora/OFL.txt","assets/fonts/zalando-sans-semiexpanded/ZalandoSansSemiExpanded-Variable.woff2","assets/fonts/zalando-sans-semiexpanded/ZalandoSansSemiExpanded-VariableItalic.woff2","assets/fonts/zalando-sans-semiexpanded/OFL.txt","assets/brand/system.css"]
+          for item in required:
+              p=Path(item); assert p.exists() and p.stat().st_size>0, f"missing/empty brand asset: {item}"
+          css=Path("assets/brand/system.css").read_text(encoding="utf-8").lower()
+          for token in ["#2563eb","#60a5fa","#ffffff","lora","zalando sans semiexpanded"]: assert token in css, f"missing token {token}"
+          assert "http://" not in css and "https://" not in css
+          text=Path("index.html").read_text(encoding="utf-8")
+          assert "/assets/brand/system.css" in text
+          assert "fonts.googleapis.com" not in text and "fonts.gstatic.com" not in text
+          assert "Bricolage Grotesque" not in text
+          lowered=text.lower()
+          for legacy in ["#e11d48","#be123c","#e11b1b"]: assert legacy not in lowered, f"legacy red remains: {legacy}"
