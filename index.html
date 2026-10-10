@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://business.sautilink.com/">
     
     <title>SautiLink Business | Privacy-First Advertising Platform</title>
     <meta name="description" content="Advertise ethically on SautiLink — Africa's emerging privacy-first social network. Transparent, effective, and respectful advertising solutions for brands that value trust.">
     
+    <meta property="og:type" content="website">
     <meta property="og:title" content="SautiLink Business — Ethical & Privacy-First Advertising">
     <meta property="og:description" content="Reach conscious audiences on a platform that respects privacy and freedom.">
-    <meta property="og:url" content="https://business.sautilink.com">
+    <meta property="og:url" content="https://business.sautilink.com/">
+    <meta name="twitter:card" content="summary">
     <meta property="og:image" content="https://raw.githubusercontent.com/sautilink/sautilink/main/assets/logo.png">
     
     <link rel="icon" href="https://raw.githubusercontent.com/sautilink/sautilink/main/assets/logo.png" type="image/png">
@@ -26,6 +30,36 @@
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+        a { color: inherit; }
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 3px solid #93c5fd;
+            outline-offset: 3px;
+        }
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 2000;
+            padding: .75rem 1rem;
+            border-radius: 10px;
+            background: #fff;
+            color: #0a0a0a;
+            text-decoration: none;
+        }
+        .skip-link:focus { top: 1rem; }
+        .form-status { margin-top: 1rem; min-height: 1.5em; }
+        .form-status.error { color: #fca5a5; }
+        .form-status.success { color: #86efac; }
+        .form-note { margin: .25rem 0 1.25rem; font-size: .9rem; color: var(--text-secondary); }
+        .form-note a, footer a { text-underline-offset: 3px; }
+        .card h3 { margin-bottom: .65rem; line-height: 1.3; }
+        .card p + p { margin-top: .65rem; }
+        .contact-form label { display: block; margin-bottom: .5rem; font-weight: 600; font-size: .95rem; }
+        .contact-form textarea { resize: vertical; min-height: 160px; }
+        .contact-form input, .contact-form textarea { font-family: inherit; }
+        .contact-form input::placeholder, .contact-form textarea::placeholder { color: #94a3b8; opacity: 1; }
+        #contact { scroll-margin-top: 7rem; }
         
         body {
             font-family: var(--font-primary);
@@ -35,7 +69,7 @@
         }
         
         header {
-            position: fixed;
+            position: sticky;
             top: 0; left: 0; right: 0;
             z-index: 1000;
             backdrop-filter: blur(12px);
@@ -50,6 +84,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
         
         .logo {
@@ -60,7 +96,7 @@
             color: inherit;
         }
         
-        main { padding-top: 100px; }
+        main { padding-top: 0; }
         
         .hero {
             text-align: center;
@@ -69,12 +105,14 @@
         }
         
         .hero h1 {
-            font-size: clamp(3.2rem, 8vw, 5.8rem);
+            font-size: clamp(2.25rem, 7vw, 5.8rem);
+            line-height: 1.12;
+            overflow-wrap: break-word;
             margin-bottom: 1.5rem;
         }
         
         .hero p {
-            font-size: 1.45rem;
+            font-size: clamp(1.05rem, 2.5vw, 1.45rem);
             max-width: 780px;
             margin: 0 auto 2.5rem;
             color: var(--text-secondary);
@@ -94,22 +132,22 @@
         
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: clamp(1rem, 3vw, 2.5rem);
         }
         
         .card {
             background: var(--surface);
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 20px;
-            padding: 2.8rem;
+            padding: clamp(1.25rem, 3vw, 2.8rem);
         }
         
         .contact-form {
             background: var(--surface);
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 24px;
-            padding: 3.5rem;
+            padding: clamp(1.25rem, 4vw, 3.5rem);
             max-width: 800px;
             margin: 4rem auto 0;
         }
@@ -121,7 +159,7 @@
             color: var(--text);
             padding: 16px 20px;
             border-radius: 16px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             font-size: 1.05rem;
         }
         
@@ -135,6 +173,27 @@
             font-weight: 600;
             border-radius: 16px;
             cursor: pointer;
+            transition: background .15s ease;
+        }
+        button:hover:not(:disabled) { background: #1d4ed8; }
+        button:disabled { opacity: .7; cursor: wait; }
+        @media (max-width: 640px) {
+            .nav { padding: 1rem; gap: .75rem; }
+            .logo { font-size: 1.55rem; }
+            .nav-contact { padding: .7rem 1rem !important; font-size: .88rem; }
+            .hero { padding: 4rem 1rem 3rem; }
+            .section { padding: 3.5rem 1rem; }
+            h2 { font-size: clamp(1.7rem, 6vw, 2.5rem); line-height: 1.2; margin-bottom: 2rem; }
+            .contact-form { margin-top: 2rem; }
+            input, textarea { padding: 14px; }
+        }
+        @media (max-width: 375px) {
+            .nav { justify-content: center; }
+            .nav-contact { display: inline-block; text-align: center; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            button { transition: none; }
         }
         
         footer {
@@ -148,16 +207,17 @@
     <link rel="stylesheet" href="/assets/brand/system.css">
 </head>
 <body data-theme="dark">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header>
-        <div class="nav">
-            <a href="https://sautilink.com" class="logo">SautiLink</a>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="https://sautilink.com" class="logo" aria-label="SautiLink home">SautiLink</a>
             <div>
-                <a href="#contact" style="background:var(--red); color:white; padding:14px 32px; border-radius:12px; text-decoration:none; font-weight:600;">Contact Business Team</a>
+                <a class="nav-contact" href="#contact" style="background:var(--red); color:white; padding:14px 32px; border-radius:12px; text-decoration:none; font-weight:600;">Contact Business Team</a>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- HERO -->
         <section class="hero">
             <h1>Advertise Responsibly on SautiLink</h1>
@@ -274,31 +334,71 @@
         <div class="section" id="contact">
             <h2>Ready to Advertise With Us?</h2>
             <div class="contact-form">
-                <form id="business-form" action="https://formspree.io/f/mqegqrya" method="POST">
-                    <input type="text" id="company" name="company" placeholder="Company / Brand Name" required>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-                    <input type="email" id="email" name="email" placeholder="Business Email Address" required>
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number">
-                    <input type="text" id="budget" name="budget" placeholder="Estimated Monthly Budget (USD)">
-                    <textarea id="message" name="message" rows="8" placeholder="Please describe your advertising goals, target audience, campaign ideas, timeline, or any specific questions..." required></textarea>
+                <form id="business-form" action="https://formspree.io/f/mqegqrya" method="POST" accept-charset="UTF-8">
+                    <label for="company">Company / Brand Name</label>
+                    <input type="text" id="company" name="company" autocomplete="organization" maxlength="150" required>
+                    <label for="name">Your Full Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" maxlength="150" required>
+                    <label for="email">Business Email Address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
+                    <label for="phone">Phone Number (optional)</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40">
+                    <label for="budget">Estimated Monthly Budget in USD (optional)</label>
+                    <input type="text" id="budget" name="budget" inputmode="decimal" maxlength="80" placeholder="e.g. 200–500">
+                    <label for="message">Tell us about your advertising goals</label>
+                    <textarea id="message" name="message" rows="6" maxlength="5000" placeholder="Your target audience, campaign ideas, timeline or questions" required></textarea>
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+                    <p class="form-note">We'll use your details to respond to your inquiry. See our <a href="https://sautilink.com/privacy">Privacy Policy</a>.</p>
                     <button type="submit" id="submit-btn">Submit Advertising Inquiry</button>
+                    <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
                 </form>
             </div>
         </div>
     </main>
 
     <footer>
-        <p style="text-align:center; padding: 4rem 2rem;">© 2026 SautiLink Corporation. All rights reserved.</p>
+        <p>© 2026 SautiLink Corporation. All rights reserved.</p>
+        <p><a href="https://sautilink.com/privacy">Privacy Policy</a> · <a href="https://sautilink.com/terms">Terms of Service</a></p>
     </footer>
 
     <script>
-        // Basic Form Validation
+        // Keep the existing Formspree destination; improve UX without changing the backend.
         const form = document.getElementById('business-form');
-        form.addEventListener('submit', function() {
-            const submitBtn = document.getElementById('submit-btn');
-            submitBtn.textContent = 'Submitting...';
-            submitBtn.disabled = true;
-        });
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMessage = document.getElementById('form-status');
+        if (window.fetch && window.FormData) {
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                if (submitBtn.disabled || !form.reportValidity()) return;
+                statusMessage.textContent = '';
+                statusMessage.className = 'form-status';
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    const result = await response.json().catch(() => ({}));
+                    if (!response.ok) {
+                        const details = Array.isArray(result.errors)
+                            ? result.errors.map((item) => item.message).filter(Boolean).join(' ')
+                            : '';
+                        throw new Error(details || 'Your inquiry could not be submitted. Please try again.');
+                    }
+                    form.reset();
+                    statusMessage.className = 'form-status success';
+                    statusMessage.textContent = 'Your inquiry has been submitted successfully. Our business team will review it.';
+                } catch (error) {
+                    statusMessage.className = 'form-status error';
+                    statusMessage.textContent = error.message || 'A network error occurred. Please try again.';
+                } finally {
+                    submitBtn.textContent = 'Submit Advertising Inquiry';
+                    submitBtn.disabled = false;
+                }
+            });
+        }
     </script>
 </body>
 </html>
