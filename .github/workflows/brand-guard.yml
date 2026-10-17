@@ -36,3 +36,8 @@ jobs:
           lowered=text.lower()
           for legacy in ["fonts.googleapis.com","fonts.gstatic.com","bricolage grotesque","lora-variable","zalando","#e11d48","#be123c","#e11b1b"]:
               assert legacy not in lowered, f"legacy brand token remains: {legacy}"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Verify Business interface and inquiry behavior
+        run: node --test tests/business-ui.test.mjs

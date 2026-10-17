@@ -3,402 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="https://business.sautilink.com/">
-    
-    <title>SautiLink Business | Privacy-First Advertising Platform</title>
-    <meta name="description" content="Advertise ethically on SautiLink — Africa's emerging privacy-first social network. Transparent, effective, and respectful advertising solutions for brands that value trust.">
-    
+    <title>SautiLink Business | Advertising, Thoughtfully Presented</title>
+    <meta name="description" content="Bring your business to the conversation on SautiLink. Explore advertising formats, prepare your creative and find a plan for your next campaign.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SautiLink Business — Ethical & Privacy-First Advertising">
-    <meta property="og:description" content="Reach conscious audiences on a platform that respects privacy and freedom.">
+    <meta property="og:title" content="SautiLink Business — Your Business. Part of the Conversation.">
+    <meta property="og:description" content="Explore advertising formats, thoughtful creative and a clear next step for your campaign on SautiLink.">
     <meta property="og:url" content="https://business.sautilink.com/">
+    <meta property="og:image" content="https://business.sautilink.com/assets/brand/sautilink-logo.webp">
     <meta name="twitter:card" content="summary">
-    <meta property="og:image" content="https://raw.githubusercontent.com/sautilink/sautilink/main/assets/logo.png">
-    
-    <link rel="icon" href="https://raw.githubusercontent.com/sautilink/sautilink/main/assets/logo.png" type="image/png">
-    
-    
-    <style>
-        :root {
-            --red: #2563eb;
-            --blue: #2563eb;
-            --bg: #0a0a0a;
-            --surface: #111111;
-            --text: #f8fafc;
-            --text-secondary: #cbd5e1;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
-        a { color: inherit; }
-        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-            outline: 3px solid #93c5fd;
-            outline-offset: 3px;
-        }
-        .skip-link {
-            position: absolute;
-            top: -100px;
-            left: 1rem;
-            z-index: 2000;
-            padding: .75rem 1rem;
-            border-radius: 10px;
-            background: #fff;
-            color: #0a0a0a;
-            text-decoration: none;
-        }
-        .skip-link:focus { top: 1rem; }
-        .form-status { margin-top: 1rem; min-height: 1.5em; }
-        .form-status.error { color: #fca5a5; }
-        .form-status.success { color: #86efac; }
-        .form-note { margin: .25rem 0 1.25rem; font-size: .9rem; color: var(--text-secondary); }
-        .form-note a, footer a { text-underline-offset: 3px; }
-        .card h3 { margin-bottom: .65rem; line-height: 1.3; }
-        .card p + p { margin-top: .65rem; }
-        .contact-form label { display: block; margin-bottom: .5rem; font-weight: 600; font-size: .95rem; }
-        .contact-form textarea { resize: vertical; min-height: 160px; }
-        .contact-form input, .contact-form textarea { font-family: inherit; }
-        .contact-form input::placeholder, .contact-form textarea::placeholder { color: #94a3b8; opacity: 1; }
-        #contact { scroll-margin-top: 7rem; }
-        
-        body {
-            font-family: var(--font-primary);
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-        }
-        
-        header {
-            position: sticky;
-            top: 0; left: 0; right: 0;
-            z-index: 1000;
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            background: rgba(10,10,10,0.85);
-        }
-        
-        .nav {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 1.25rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .logo {
-            font-weight: 700;
-            font-size: 1.85rem;
-            letter-spacing: -0.04em;
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        main { padding-top: 0; }
-        
-        .hero {
-            text-align: center;
-            padding: 7rem 2rem 5rem;
-            background: linear-gradient(135deg, rgba(37,99,235,0.12), transparent);
-        }
-        
-        .hero h1 {
-            font-size: clamp(2.25rem, 7vw, 5.8rem);
-            line-height: 1.12;
-            overflow-wrap: break-word;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero p {
-            font-size: clamp(1.05rem, 2.5vw, 1.45rem);
-            max-width: 780px;
-            margin: 0 auto 2.5rem;
-            color: var(--text-secondary);
-        }
-        
-        .section {
-            padding: 6rem 2rem;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-            gap: clamp(1rem, 3vw, 2.5rem);
-        }
-        
-        .card {
-            background: var(--surface);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: clamp(1.25rem, 3vw, 2.8rem);
-        }
-        
-        .contact-form {
-            background: var(--surface);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 24px;
-            padding: clamp(1.25rem, 4vw, 3.5rem);
-            max-width: 800px;
-            margin: 4rem auto 0;
-        }
-        
-        input, textarea {
-            width: 100%;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.15);
-            color: var(--text);
-            padding: 16px 20px;
-            border-radius: 16px;
-            margin-bottom: 1.25rem;
-            font-size: 1.05rem;
-        }
-        
-        button {
-            width: 100%;
-            background: var(--red);
-            color: white;
-            border: none;
-            padding: 18px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            border-radius: 16px;
-            cursor: pointer;
-            transition: background .15s ease;
-        }
-        button:hover:not(:disabled) { background: #1d4ed8; }
-        button:disabled { opacity: .7; cursor: wait; }
-        @media (max-width: 640px) {
-            .nav { padding: 1rem; gap: .75rem; }
-            .logo { font-size: 1.55rem; }
-            .nav-contact { padding: .7rem 1rem !important; font-size: .88rem; }
-            .hero { padding: 4rem 1rem 3rem; }
-            .section { padding: 3.5rem 1rem; }
-            h2 { font-size: clamp(1.7rem, 6vw, 2.5rem); line-height: 1.2; margin-bottom: 2rem; }
-            .contact-form { margin-top: 2rem; }
-            input, textarea { padding: 14px; }
-        }
-        @media (max-width: 375px) {
-            .nav { justify-content: center; }
-            .nav-contact { display: inline-block; text-align: center; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-            button { transition: none; }
-        }
-        
-        footer {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding: 4rem 2rem 2rem;
-            text-align: center;
-            color: var(--text-secondary);
-        }
-    </style>
+    <link rel="icon" href="/assets/brand/sautilink-logo.webp" type="image/webp">
     <link rel="preload" href="/assets/fonts/inter/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/assets/brand/system.css">
+    <link rel="stylesheet" href="/assets/business.css?v=20261017-1">
+    <script src="/assets/business.js?v=20261017-1" defer></script>
+    <script src="/assets/business-form.js?v=20261017-1" defer></script>
 </head>
-<body data-theme="dark">
+<body data-theme="light">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header>
-        <nav class="nav" aria-label="Main navigation">
-            <a href="https://sautilink.com" class="logo" aria-label="SautiLink home">SautiLink</a>
-            <div>
-                <a class="nav-contact" href="#contact" style="background:var(--red); color:white; padding:14px 32px; border-radius:12px; text-decoration:none; font-weight:600;">Contact Business Team</a>
-            </div>
-        </nav>
+    <header class="global-header">
+        <div class="global-nav page-width">
+            <a class="brand" href="https://sautilink.com" aria-label="SautiLink home">
+                <img src="/assets/brand/sautilink-logo.webp" width="184" height="96" alt="">
+                <span>SautiLink</span>
+            </a>
+            <nav class="global-links" aria-label="SautiLink">
+                <a href="https://sautilink.com">Discover</a>
+                <a href="https://business.sautilink.com/" aria-current="page">Business</a>
+                <a href="https://sautilink.com/help">Support</a>
+            </nav>
+        </div>
     </header>
+    <div class="local-header">
+        <nav class="local-nav page-width" aria-label="Business navigation">
+            <a class="product-name" href="#main-content">Business</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="business-navigation" aria-label="Open Business navigation">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="local-links" id="business-navigation">
+                <a href="#formats">Ad formats</a>
+                <a href="#creative">Creative guide</a>
+                <a href="#plans">Plans</a>
+                <a href="#guidelines">Guidelines</a>
+            </div>
+            <a class="button button-small" href="#contact">Talk to us</a>
+        </nav>
+    </div>
 
     <main id="main-content">
-        <!-- HERO -->
-        <section class="hero">
-            <h1>Advertise Responsibly on SautiLink</h1>
-            <p>Reach a fast-growing, privacy-conscious community on Africa's newest social platform. Build authentic connections with users who value transparency and data protection.</p>
+        <section class="hero section-space" aria-labelledby="hero-heading">
+            <div class="hero-copy page-width">
+                <p class="eyebrow">SautiLink for Business</p>
+                <h1 id="hero-heading">Your business.<br><span>Part of the conversation.</span></h1>
+                <p class="hero-lede">A product worth discovering. An idea worth sharing. Bring your story to SautiLink with advertising that makes the next step clear.</p>
+                <div class="hero-actions">
+                    <a class="button" href="#formats">Explore ad formats</a>
+                    <a class="text-link" href="#contact">Plan your campaign <span aria-hidden="true">›</span></a>
+                </div>
+            </div>
+            <figure class="hero-showcase page-width">
+                <div class="showcase-scene" aria-hidden="true">
+                    <div class="showcase-orbit orbit-one"></div>
+                    <div class="showcase-orbit orbit-two"></div>
+                    <div class="creative-note note-one"><span class="note-icon">Aa</span><span>A clear message.<br><strong>A memorable first look.</strong></span></div>
+                    <div class="ad-preview hero-ad">
+                        <div class="ad-identity"><span class="sample-avatar">Y</span><div><strong>Your business</strong><span>Sponsored</span></div><span class="ad-more">···</span></div>
+                        <img class="ad-photo" src="/assets/business/product-story.webp" srcset="/assets/business/product-story-768.webp 768w, /assets/business/product-story.webp 1536w" sizes="(max-width: 600px) 86vw, 420px" width="1536" height="1024" fetchpriority="high" alt="">
+                        <div class="ad-copy"><span class="sample-kicker">Made for the everyday</span><h2>Small essentials.<br>So many possibilities.</h2><div class="ad-bottom"><span>Your next favourite starts here.</span><span class="sample-cta">Discover more</span></div></div>
+                    </div>
+                    <div class="event-preview hero-event">
+                        <img src="/assets/business/creative-workspace-768.webp" width="768" height="512" alt="">
+                        <div class="event-preview-copy"><span class="sample-kicker">Your next event</span><strong>Good ideas.<br>Great company.</strong><span class="sample-event-link">Be part of it <span>↗</span></span></div>
+                    </div>
+                    <div class="creative-note note-two"><span class="check-icon">✓</span><span>Your story.<br><strong>Clearly sponsored.</strong></span></div>
+                </div>
+                <figcaption>Illustrative advertising concepts. Final creative and placement are agreed with the business team.</figcaption>
+            </figure>
         </section>
 
-        <!-- WHY SAUTILINK BUSINESS -->
-        <div class="section">
-            <h2>Why Partner With SautiLink?</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Privacy-First Audience</h3>
-                    <p>Users who deliberately choose a platform that doesn't sell their data. Higher trust translates to stronger brand affinity and better campaign performance.</p>
-                </div>
-                <div class="card">
-                    <h3>Growing African Market</h3>
-                    <p>Tap into a young, digitally active demographic across East Africa and beyond, with authentic local relevance.</p>
-                </div>
-                <div class="card">
-                    <h3>Ethical Advertising Model</h3>
-                    <p>No manipulative algorithms. No invasive tracking. Clear labeling and respect for user experience.</p>
-                </div>
+        <section class="intro-section section-space page-width" aria-labelledby="intro-heading">
+            <div class="section-heading">
+                <p class="eyebrow">Start with the intention</p>
+                <h2 id="intro-heading">What would you like<br>your story to do?</h2>
+                <p>Give your campaign one clear purpose. Then choose the creative that helps people understand it.</p>
             </div>
-        </div>
-
-        <!-- AUDIENCE INSIGHTS -->
-        <div class="section">
-            <h2>Our Community</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Demographics</h3>
-                    <p>Predominantly 18–45 years old, urban and semi-urban users, tech-savvy, socially conscious, and increasingly entrepreneurial.</p>
-                </div>
-                <div class="card">
-                    <h3>Key Interests</h3>
-                    <p>Technology & Innovation, Local Culture, Entrepreneurship, Education, Health, Community Development, and Pan-African issues.</p>
-                </div>
-                <div class="card">
-                    <h3>User Values</h3>
-                    <p>Strong emphasis on digital rights, freedom of expression, data privacy, transparency, and authentic storytelling.</p>
-                </div>
+            <div class="goal-grid">
+                <article class="goal-card"><span class="line-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4"/><path d="M16 2v4m0 20v4M2 16h4m20 0h4"/></svg></span><h3>Make an introduction.</h3><p>Put a product, service or new idea in front of the conversation with a simple, recognisable message.</p><a class="text-link" href="#formats" data-open-format="posts">Explore promoted posts <span aria-hidden="true">›</span></a></article>
+                <article class="goal-card"><span class="line-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" rx="5"/><path d="m7 23 7-8 5 5 3-3 5 5"/><circle cx="21" cy="11" r="2"/></svg></span><h3>Show the difference.</h3><p>Let the details do the talking. Give people a closer look at what you make, offer or stand for.</p><a class="text-link" href="#formats" data-open-format="images">Explore image and carousel ads <span aria-hidden="true">›</span></a></article>
+                <article class="goal-card"><span class="line-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 25 25 7M9 7h16v16"/><path d="M7 7v18h18"/></svg></span><h3>Invite the next step.</h3><p>Give an interested person a clear reason to learn more, discover your business or explore your event.</p><a class="text-link" href="#formats" data-open-format="events">Explore event promotion <span aria-hidden="true">›</span></a></article>
             </div>
-        </div>
+        </section>
 
-        <!-- ADVERTISING FORMATS -->
-        <div class="section">
-            <h2>Available Advertising Formats</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Promoted Posts</h3>
-                    <p>Boost your organic content to reach more users in their feeds with clear "Sponsored" disclosure.</p>
+        <section class="formats-section section-space" id="formats" aria-labelledby="formats-heading">
+            <div class="page-width">
+                <div class="section-heading">
+                    <p class="eyebrow">Advertising formats</p>
+                    <h2 id="formats-heading">Different ways to tell<br>one great story.</h2>
+                    <p>Explore advertising formats on SautiLink. These examples help you picture your creative before you send a brief.</p>
                 </div>
-                <div class="card">
-                    <h3>Video Advertising</h3>
-                    <p>Short-form videos (15–60 seconds) and longer branded content that tells your story authentically.</p>
+                <div class="format-tabs" role="tablist" aria-label="Advertising formats" hidden>
+                    <button id="tab-posts" type="button" role="tab" aria-selected="true" aria-controls="panel-posts" tabindex="0" data-format-tab="posts">Promoted posts</button>
+                    <button id="tab-images" type="button" role="tab" aria-selected="false" aria-controls="panel-images" tabindex="-1" data-format-tab="images">Image &amp; carousel</button>
+                    <button id="tab-video" type="button" role="tab" aria-selected="false" aria-controls="panel-video" tabindex="-1" data-format-tab="video">Video</button>
+                    <button id="tab-spotlight" type="button" role="tab" aria-selected="false" aria-controls="panel-spotlight" tabindex="-1" data-format-tab="spotlight">Business spotlight</button>
+                    <button id="tab-events" type="button" role="tab" aria-selected="false" aria-controls="panel-events" tabindex="-1" data-format-tab="events">Events &amp; campaigns</button>
                 </div>
-                <div class="card">
-                    <h3>Image & Carousel Ads</h3>
-                    <p>High-quality single images or multi-image carousels with compelling headlines and calls to action.</p>
+                <div class="format-panels">
+                    <article class="format-panel" id="panel-posts" role="tabpanel" aria-labelledby="tab-posts" tabindex="0">
+                        <div class="format-description"><span class="format-number">01 / Promoted posts</span><h3>A familiar place.<br>A fresh introduction.</h3><p>Bring your organic content into more conversations in the feed, with clear Sponsored disclosure.</p><ul class="check-list"><li>Lead with the point people should remember.</li><li>Choose an image that makes the message immediate.</li><li>Give interested people one clear next step.</li></ul><a class="text-link" href="#contact" data-inquiry-format="Promoted Posts">Ask about promoted posts <span aria-hidden="true">›</span></a></div>
+                        <div class="format-stage stage-posts"><p class="preview-label">Illustrative feed creative</p><div class="ad-preview format-ad"><div class="ad-identity"><span class="sample-avatar">Y</span><div><strong>Your business</strong><span>Sponsored</span></div><span class="ad-more" aria-hidden="true">···</span></div><p class="feed-message">Meet your everyday essentials. Thoughtful details, ready for whatever comes next.</p><img class="ad-photo" src="/assets/business/product-story-768.webp" width="768" height="512" loading="lazy" alt="Unbranded everyday products in a studio still life."><div class="preview-action"><strong>A little more possibility.</strong><span class="sample-cta">Learn more</span></div></div></div>
+                    </article>
+                    <article class="format-panel" id="panel-images" role="tabpanel" aria-labelledby="tab-images" tabindex="0">
+                        <div class="format-description"><span class="format-number">02 / Image &amp; carousel ads</span><h3>One image.<br>Or a story in chapters.</h3><p>Make a single image memorable, or use a multi-image carousel to show a collection, a process or the people behind your business.</p><ul class="check-list"><li>Give every image one clear purpose.</li><li>Use a consistent visual style from frame to frame.</li><li>Keep headlines and calls to action easy to read.</li></ul><a class="text-link" href="#contact" data-inquiry-format="Image & Carousel Ads">Ask about image and carousel ads <span aria-hidden="true">›</span></a></div>
+                        <div class="format-stage stage-images"><p class="preview-label">Illustrative carousel creative</p><div class="ad-preview format-ad"><div class="ad-identity"><span class="sample-avatar">Y</span><div><strong>Your business</strong><span>Sponsored</span></div><span class="ad-more" aria-hidden="true">···</span></div><div class="sample-carousel" role="region" aria-roledescription="carousel" aria-label="Example creative frames"><figure class="carousel-slide" data-carousel-slide="0" role="group" aria-roledescription="slide" aria-label="1 of 2"><img class="ad-photo" src="/assets/business/product-story-768.webp" width="768" height="512" loading="lazy" alt="A blue bottle and cream tote in a product still life."><figcaption><strong>Start with the details.</strong><span>Show what makes your product distinctive.</span></figcaption></figure><figure class="carousel-slide" data-carousel-slide="1" role="group" aria-roledescription="slide" aria-label="2 of 2"><img class="ad-photo" src="/assets/business/creative-workspace-768.webp" width="768" height="512" loading="lazy" alt="People sharing ideas around a creative workspace."><figcaption><strong>Introduce the people.</strong><span>Give your story a little more context.</span></figcaption></figure><div class="carousel-controls" hidden><button type="button" data-carousel-direction="previous" aria-label="Previous creative frame"><span aria-hidden="true">‹</span></button><p id="carousel-status" role="status" aria-live="polite" aria-atomic="true">1 of 2</p><button type="button" data-carousel-direction="next" aria-label="Next creative frame"><span aria-hidden="true">›</span></button></div></div></div></div>
+                    </article>
+                    <article class="format-panel" id="panel-video" role="tabpanel" aria-labelledby="tab-video" tabindex="0">
+                        <div class="format-description"><span class="format-number">03 / Video advertising</span><h3>Give your story<br>a little movement.</h3><p>Use short-form video or longer branded content to introduce a product, demonstrate a service or share the story behind your business.</p><ul class="check-list"><li>Make the opening easy to understand.</li><li>Use captions when spoken words carry the story.</li><li>End with a clear, relevant next step.</li></ul><p class="format-detail">The current offering includes short-form videos of 15–60 seconds. Discuss longer creative and final requirements with the team.</p><a class="text-link" href="#contact" data-inquiry-format="Video Advertising">Ask about video advertising <span aria-hidden="true">›</span></a></div>
+                        <div class="format-stage stage-video"><p class="preview-label">Illustrative video storyboard</p><div class="storyboard"><div class="story-frame"><img src="/assets/business/product-story-768.webp" width="768" height="512" loading="lazy" alt="Product still life for an opening video frame."><span class="story-index">01</span><div><span>Open with the idea.</span><strong>Made for<br>your everyday.</strong></div></div><div class="story-frame"><img src="/assets/business/creative-workspace-768.webp" width="768" height="512" loading="lazy" alt="A group collaborating, for a story's second frame."><span class="story-index">02</span><div><span>Give it context.</span><strong>Ready for<br>what's next.</strong></div></div><div class="story-ending"><span class="story-index">03</span><span class="story-logo">Your business</span><strong>Discover a<br>little more.</strong><span class="sample-cta">Explore the collection</span></div></div><p class="stage-note">Plan the opening, the story and the next step.</p></div>
+                    </article>
+                    <article class="format-panel" id="panel-spotlight" role="tabpanel" aria-labelledby="tab-spotlight" tabindex="0">
+                        <div class="format-description"><span class="format-number">04 / Business spotlight</span><h3>Put the people<br>behind it in focus.</h3><p>Introduce your business through premium placement in the business discovery section. Share what you do and why it matters to the people you serve.</p><ul class="check-list"><li>Make your offer easy to understand.</li><li>Show the people, work or product behind it.</li><li>Keep your business details clear and current.</li></ul><a class="text-link" href="#contact" data-inquiry-format="Business Spotlight">Ask about business spotlight <span aria-hidden="true">›</span></a></div>
+                        <div class="format-stage stage-spotlight"><p class="preview-label">Illustrative business spotlight</p><div class="spotlight-preview"><img src="/assets/business/creative-workspace-768.webp" width="768" height="512" loading="lazy" alt="A team exchanging ideas in a bright shared workspace."><div class="spotlight-copy"><span class="sample-kicker">Business spotlight · Paid promotion</span><h4>Meet the minds<br>behind the idea.</h4><p>Share the work, the people and the purpose that make your business yours.</p><span class="spotlight-bottom"><strong>Your business</strong><span class="sample-cta">Discover more</span></span></div></div></div>
+                    </article>
+                    <article class="format-panel" id="panel-events" role="tabpanel" aria-labelledby="tab-events" tabindex="0">
+                        <div class="format-description"><span class="format-number">05 / Event &amp; campaign promotion</span><h3>Give your next<br>big moment a place.</h3><p>Bring attention to a launch, webinar, community event or campaign with creative that makes the invitation clear.</p><ul class="check-list"><li>Say what is happening and who it is for.</li><li>Keep dates, venue or online details easy to find.</li><li>Use a destination that explains how to take part.</li></ul><a class="text-link" href="#contact" data-inquiry-format="Event & Campaign Promotion">Ask about event promotion <span aria-hidden="true">›</span></a></div>
+                        <div class="format-stage stage-events"><p class="preview-label">Illustrative event creative</p><div class="event-creative"><img src="/assets/business/creative-workspace-768.webp" width="768" height="512" loading="lazy" alt="People connecting and sharing ideas around a table."><div><span class="event-tag">Your business · Sponsored</span><h4>Good ideas.<br>Great company.<br>Your next event.</h4><p>Make the invitation memorable.</p><span class="sample-cta">Explore the event</span></div></div></div>
+                    </article>
                 </div>
-                <div class="card">
-                    <h3>Business Spotlight</h3>
-                    <p>Premium placement in our business discovery section for local and African enterprises.</p>
-                </div>
-                <div class="card">
-                    <h3>Event & Campaign Promotion</h3>
-                    <p>Promote product launches, webinars, social impact initiatives, and community events.</p>
-                </div>
+                <p class="format-footnote">Previews show creative direction, not a guaranteed placement or final interface. Confirm campaign details, asset specifications and availability with the business team.</p>
             </div>
-        </div>
+        </section>
 
-        <!-- PRICING -->
-        <div class="section">
-            <h2>Flexible Advertising Plans</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Starter Plan</h3>
-                    <p><strong>$199 / month</strong></p>
-                    <p>Ideal for small businesses and startups looking to test the platform.</p>
-                </div>
-                <div class="card">
-                    <h3>Growth Plan</h3>
-                    <p><strong>$599 / month</strong></p>
-                    <p>Perfect for scaling businesses needing more reach and analytics.</p>
-                </div>
-                <div class="card">
-                    <h3>Enterprise Plan</h3>
-                    <p><strong>Custom Pricing</strong></p>
-                    <p>For large brands and agencies requiring dedicated support and custom solutions.</p>
-                </div>
+        <section class="creative-section section-space page-width" id="creative" aria-labelledby="creative-heading">
+            <div class="section-heading"><p class="eyebrow">A little preparation goes a long way</p><h2 id="creative-heading">Good creative starts<br>with something clear.</h2><p>Keep the idea simple enough to understand at a glance. Make every detail help tell the same story.</p></div>
+            <div class="creative-grid">
+                <article class="creative-card creative-feature"><div><span class="step-label">01 / The message</span><h3>One main idea.<br>Room to stand out.</h3><p>Choose the thing you most want someone to remember. Let your headline, image and next step support that idea.</p></div><div class="message-example" aria-label="Example campaign headline"><span class="sample-kicker">A headline with a purpose</span><strong>Meet your new<br><span>everyday essential.</span></strong><span class="example-rule"></span><p>Simple words. A specific reason to care.</p></div></article>
+                <article class="creative-card"><span class="step-label">02 / The visual</span><h3>Show the thing<br>that matters.</h3><p>Use a sharp, well-lit image or a focused video. Keep the subject visible when you crop, and leave breathing room around important details.</p><span class="line-icon creative-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M11 4v33h33M4 11h33v33"/><path d="m16 31 8-9 9 10"/><circle cx="29" cy="18" r="2"/></svg></span></article>
+                <article class="creative-card"><span class="step-label">03 / The next step</span><h3>Make the invitation<br>easy to follow.</h3><p>Match the call to action to the destination. If you invite someone to explore a product or an event, take them to the relevant details.</p><div class="cta-example" aria-hidden="true"><span>Explore the collection</span><span>↗</span></div></article>
             </div>
-        </div>
+            <div class="brief-strip"><div><h3>A useful first brief.</h3><p>Your goal, intended audience, preferred format, creative, timeline and budget. Bring what you have; include questions about what you still need.</p></div><a class="text-link" href="#contact">Start with your idea <span aria-hidden="true">›</span></a></div>
+        </section>
 
-        <!-- GUIDELINES -->
-        <div class="section">
-            <h2>Advertising Guidelines & Requirements</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Content Standards</h3>
-                    <p>All ads must be truthful, respectful, and add value to our community. Misleading claims are strictly prohibited.</p>
+        <section class="plans-section section-space" id="plans" aria-labelledby="plans-heading">
+            <div class="page-width">
+                <div class="section-heading"><p class="eyebrow">Advertising plans</p><h2 id="plans-heading">Find your starting point.</h2><p>Explore the monthly plans, then talk through the scope and final terms with our business team.</p></div>
+                <div class="plan-grid">
+                    <article class="plan-card"><span class="plan-label">For a first campaign</span><h3>Starter</h3><p class="plan-price"><span>$199</span> <span class="price-period">USD / month</span></p><p class="plan-description">A starting point for small businesses and startups exploring advertising on SautiLink.</p><a class="button button-secondary" href="#contact" data-inquiry-plan="Starter" data-plan-budget="199">Ask about Starter</a><p class="plan-note">Bring a clear idea and your first creative.</p></article>
+                    <article class="plan-card plan-featured"><span class="plan-label">For the next chapter</span><h3>Growth</h3><p class="plan-price"><span>$599</span> <span class="price-period">USD / month</span></p><p class="plan-description">For growing businesses looking to discuss wider reach and campaign analytics.</p><a class="button" href="#contact" data-inquiry-plan="Growth" data-plan-budget="599">Ask about Growth</a><p class="plan-note">Talk through your goals and reporting needs.</p></article>
+                    <article class="plan-card"><span class="plan-label">For a tailored approach</span><h3>Enterprise</h3><p class="plan-price custom-price"><span>Let's talk.</span></p><p class="plan-description">Custom pricing for brands and agencies that need dedicated support and a tailored solution.</p><a class="button button-secondary" href="#contact" data-inquiry-plan="Enterprise">Discuss Enterprise</a><p class="plan-note">Share your brief, scope and requirements.</p></article>
                 </div>
-                <div class="card">
-                    <h3>Prohibited Categories</h3>
-                    <p>Adult content, gambling, tobacco, weapons, hate speech, and unapproved political campaigning.</p>
-                </div>
-                <div class="card">
-                    <h3>Transparency Rules</h3>
-                    <p>Every advertisement must clearly display "Sponsored" or "Paid Promotion" labels.</p>
-                </div>
+                <p class="section-footnote">Send an inquiry to discuss a plan. Campaign scope, deliverables and final arrangements are confirmed by the business team.</p>
             </div>
-        </div>
+        </section>
 
-        <!-- CONTACT FORM -->
-        <div class="section" id="contact">
-            <h2>Ready to Advertise With Us?</h2>
+        <section class="guidelines-section section-space page-width" id="guidelines" aria-labelledby="guidelines-heading">
+            <div class="guidelines-intro"><p class="eyebrow">Advertising, considered</p><h2 id="guidelines-heading">Clear standards.<br>A better conversation.</h2><p>Make your message truthful, respectful and easy to recognise as advertising. These standards apply whichever format you choose.</p><a class="text-link" href="https://sautilink.com/terms">Read the Terms of Service <span aria-hidden="true">›</span></a></div>
+            <div class="standards-list">
+                <details open><summary><span><span class="standard-number">01</span> Say what you can stand behind.</span><span class="disclosure-icon" aria-hidden="true">+</span></summary><div><p>Ads must be truthful, respectful and add value to the community. Misleading claims are prohibited. Review your creative and destination together so they tell the same story.</p></div></details>
+                <details><summary><span><span class="standard-number">02</span> Make sponsorship clear.</span><span class="disclosure-icon" aria-hidden="true">+</span></summary><div><p>Every advertisement must clearly display a Sponsored or Paid Promotion label. Help people understand who is speaking and why the content is being shown.</p></div></details>
+                <details><summary><span><span class="standard-number">03</span> Know the content boundaries.</span><span class="disclosure-icon" aria-hidden="true">+</span></summary><div><p>Prohibited categories include adult content, gambling, tobacco, weapons, hate speech and unapproved political campaigning.</p></div></details>
+            </div>
+        </section>
+
+        <section class="faq-section section-space" aria-labelledby="faq-heading">
+            <div class="reading-width"><div class="section-heading"><p class="eyebrow">A few helpful answers</p><h2 id="faq-heading">Before you get started.</h2></div><div class="faq-list">
+                <details><summary>How do I start a campaign?<span class="disclosure-icon" aria-hidden="true">+</span></summary><div><p>Send an advertising inquiry below with your business details and campaign goals. The business team will review your inquiry and discuss the next steps with you.</p></div></details>
+                <details><summary>What should I include in my inquiry?<span class="disclosure-icon" aria-hidden="true">+</span></summary><div><p>Include what you want to promote, who you hope to reach, your preferred format and your timeline. If you have a budget, creative or a destination link ready, include those too.</p></div></details>
+                <details><summary>Can I discuss more than one format?<span class="disclosure-icon" aria-hidden="true">+</span></summary><div><p>Yes. Describe the formats you are considering in your message. The examples above can help you explain the story you want to tell; the team can discuss the campaign details with you.</p></div></details>
+                <details><summary>Where can I check creative requirements?<span class="disclosure-icon" aria-hidden="true">+</span></summary><div><p>Start with the creative guide and advertising guidelines on this page. Ask the business team to confirm final asset specifications and placement requirements before preparing your finished files.</p></div></details>
+                <details><summary>How are my inquiry details used?<span class="disclosure-icon" aria-hidden="true">+</span></summary><div><p>Your inquiry details are used to respond to your request. Read the <a href="https://sautilink.com/privacy">Privacy Policy</a> for information about how personal data is handled.</p></div></details>
+            </div></div>
+        </section>
+
+        <section class="contact-section section-space page-width" id="contact" aria-labelledby="contact-heading">
+            <div class="contact-intro"><p class="eyebrow">Let's make a start</p><h2 id="contact-heading">Your next campaign<br>starts with a conversation.</h2><p>Tell us what you have in mind. Share your business, your idea and the people you would like to reach.</p><div class="contact-expectation"><span class="line-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M27 15c0 6-5 10-11 10-2 0-4-.3-5-1l-6 3 1-6c-2-2-3-4-3-6C3 9 9 5 16 5s11 4 11 10Z"/><path d="M10 13h12M10 17h8"/></svg></span><div><h3>Bring the idea. Include the questions.</h3><p>You do not need a finished campaign to begin. A clear goal is a useful place to start.</p></div></div><p class="contact-help">Need help with your SautiLink account? <a href="https://sautilink.com/help">Visit Support</a>.</p></div>
             <div class="contact-form">
                 <form id="business-form" action="https://formspree.io/f/mqegqrya" method="POST" accept-charset="UTF-8">
-                    <label for="company">Company / Brand Name</label>
-                    <input type="text" id="company" name="company" autocomplete="organization" maxlength="150" required>
-                    <label for="name">Your Full Name</label>
-                    <input type="text" id="name" name="name" autocomplete="name" maxlength="150" required>
-                    <label for="email">Business Email Address</label>
-                    <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
-                    <label for="phone">Phone Number (optional)</label>
-                    <input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40">
-                    <label for="budget">Estimated Monthly Budget in USD (optional)</label>
-                    <input type="text" id="budget" name="budget" inputmode="decimal" maxlength="80" placeholder="e.g. 200–500">
-                    <label for="message">Tell us about your advertising goals</label>
-                    <textarea id="message" name="message" rows="6" maxlength="5000" placeholder="Your target audience, campaign ideas, timeline or questions" required></textarea>
-                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+                    <h3>Advertising inquiry</h3>
+                    <p class="form-intro">Fields without “optional” are required.</p>
+                    <div class="selected-plan" id="selected-plan-summary" hidden><div><span>Plan you would like to discuss</span><strong id="selected-plan-label"></strong></div><button type="button" id="clear-plan" aria-label="Remove selected advertising plan">Remove</button></div>
+                    <input type="hidden" id="selected-plan" name="selected_plan" value="">
+                    <div class="field"><label for="company">Company / brand name</label><input type="text" id="company" name="company" autocomplete="organization" maxlength="150" required></div>
+                    <div class="field"><label for="name">Your full name</label><input type="text" id="name" name="name" autocomplete="name" maxlength="150" required></div>
+                    <div class="field-row"><div class="field"><label for="email">Business email address</label><input type="email" id="email" name="email" autocomplete="email" maxlength="254" required></div><div class="field"><label for="phone">Phone number <span>(optional)</span></label><input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40"></div></div>
+                    <div class="field"><label for="advertising-format">Advertising format <span>(optional)</span></label><select id="advertising-format" name="advertising_format"><option value="">I'd like to discuss the options</option><option value="Promoted Posts">Promoted posts</option><option value="Image & Carousel Ads">Image &amp; carousel ads</option><option value="Video Advertising">Video advertising</option><option value="Business Spotlight">Business spotlight</option><option value="Event & Campaign Promotion">Event &amp; campaign promotion</option></select></div>
+                    <div class="field"><label for="budget">Estimated monthly budget in USD <span>(optional)</span></label><input type="text" id="budget" name="budget" inputmode="decimal" maxlength="80" placeholder="e.g. 200–500"></div>
+                    <div class="field"><label for="message">Tell us about your advertising goals</label><textarea id="message" name="message" rows="6" maxlength="5000" placeholder="Your target audience, campaign ideas, timeline or questions" required></textarea></div>
+                    <input class="form-trap" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <p class="form-note">We'll use your details to respond to your inquiry. See our <a href="https://sautilink.com/privacy">Privacy Policy</a>.</p>
-                    <button type="submit" id="submit-btn">Submit Advertising Inquiry</button>
+                    <button class="button form-submit" type="submit" id="submit-btn">Submit Advertising Inquiry</button>
                     <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
                 </form>
+                <p class="sr-only" id="inquiry-selection-status" role="status" aria-live="polite" aria-atomic="true"></p>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2026 SautiLink Corporation. All rights reserved.</p>
-        <p><a href="https://sautilink.com/privacy">Privacy Policy</a> · <a href="https://sautilink.com/terms">Terms of Service</a></p>
+    <footer class="site-footer">
+        <div class="page-width">
+            <div class="footer-top"><div class="footer-brand"><a class="brand" href="https://sautilink.com" aria-label="SautiLink home"><img src="/assets/brand/sautilink-logo.webp" width="184" height="96" alt=""><span>SautiLink</span></a><p>Your business.<br>Part of the conversation.</p></div><nav class="footer-links" aria-label="Footer"><div><h2>Business</h2><a href="#formats">Advertising formats</a><a href="#creative">Creative guide</a><a href="#plans">Advertising plans</a><a href="#contact">Contact the team</a></div><div><h2>SautiLink</h2><a href="https://sautilink.com">Explore SautiLink</a><a href="https://sautilink.com/help">Support</a><a href="https://sautilink.com/contact">Contact</a></div><div><h2>Legal</h2><a href="https://sautilink.com/privacy">Privacy Policy</a><a href="https://sautilink.com/terms">Terms of Service</a><a href="#guidelines">Advertising guidelines</a></div></nav></div>
+            <div class="footer-bottom"><p>© <span data-current-year>2026</span> SautiLink Corporation. All rights reserved.</p><span>Business</span></div>
+        </div>
     </footer>
-
-    <script>
-        // Keep the existing Formspree destination; improve UX without changing the backend.
-        const form = document.getElementById('business-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const statusMessage = document.getElementById('form-status');
-        if (window.fetch && window.FormData) {
-            form.addEventListener('submit', async (event) => {
-                event.preventDefault();
-                if (submitBtn.disabled || !form.reportValidity()) return;
-                statusMessage.textContent = '';
-                statusMessage.className = 'form-status';
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Submitting...';
-                try {
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: new FormData(form),
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    const result = await response.json().catch(() => ({}));
-                    if (!response.ok) {
-                        const details = Array.isArray(result.errors)
-                            ? result.errors.map((item) => item.message).filter(Boolean).join(' ')
-                            : '';
-                        throw new Error(details || 'Your inquiry could not be submitted. Please try again.');
-                    }
-                    form.reset();
-                    statusMessage.className = 'form-status success';
-                    statusMessage.textContent = 'Your inquiry has been submitted successfully. Our business team will review it.';
-                } catch (error) {
-                    statusMessage.className = 'form-status error';
-                    statusMessage.textContent = error.message || 'A network error occurred. Please try again.';
-                } finally {
-                    submitBtn.textContent = 'Submit Advertising Inquiry';
-                    submitBtn.disabled = false;
-                }
-            });
-        }
-    </script>
 </body>
 </html>
