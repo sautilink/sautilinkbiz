@@ -1,0 +1,19 @@
+/* Match the shared dropdown to the Business inquiry's existing native field surfaces. */
+body[data-public-selects] {
+  --sl-select-bg: #fff;
+  --sl-select-border: #868690;
+  --sl-select-ink: var(--ink);
+  --sl-select-muted: var(--muted);
+  --sl-select-accent: var(--blue);
+  --sl-select-soft: var(--surface-blue);
+  --sl-select-elevated: var(--page);
+}
+body[data-public-selects] .sl-select-trigger {
+  min-height: 50px;
+  padding: 13px 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+body[data-public-selects] .sl-select-option { font-size: 14px; }
