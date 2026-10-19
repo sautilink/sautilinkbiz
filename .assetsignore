@@ -3,3 +3,6 @@
 README.md
 wrangler.jsonc
 .assetsignore
+.wrangler/
+tests/
+.gitignore
