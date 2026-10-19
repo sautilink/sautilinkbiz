@@ -1,0 +1,97 @@
+/* Business presentation of the shared AnimateIcons Huge symbols. */
+body[data-public-icons] .public-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+  overflow: visible;
+}
+
+body[data-public-icons] .global-links a,
+body[data-public-icons] .local-links a,
+body[data-public-icons] .product-name,
+body[data-public-icons] .button,
+body[data-public-icons] .eyebrow,
+body[data-public-icons] .format-number,
+body[data-public-icons] .step-label,
+body[data-public-icons] .plan-heading,
+body[data-public-icons] .brief-heading,
+body[data-public-icons] .footer-links h2,
+body[data-public-icons] .footer-links a {
+  column-gap: 8px;
+}
+
+body[data-public-icons] .product-name,
+body[data-public-icons] .eyebrow,
+body[data-public-icons] .format-number,
+body[data-public-icons] .step-label,
+body[data-public-icons] .plan-heading,
+body[data-public-icons] .brief-heading,
+body[data-public-icons] .footer-links h2 {
+  display: flex;
+  align-items: center;
+}
+
+body[data-public-icons] .eyebrow { justify-content: center; }
+body[data-public-icons] .guidelines-intro .eyebrow,
+body[data-public-icons] .contact-intro .eyebrow { justify-content: flex-start; }
+body[data-public-icons] .eyebrow > .public-icon { color: var(--blue); }
+body[data-public-icons] .global-links .public-icon,
+body[data-public-icons] .local-links .public-icon,
+body[data-public-icons] .footer-links .public-icon { width: 16px; height: 16px; }
+body[data-public-icons] .product-name > .public-icon { width: 23px; height: 23px; color: var(--blue); }
+body[data-public-icons] .nav-toggle > .public-icon { width: 22px; height: 22px; }
+body[data-public-icons] .button > .public-icon { width: 18px; height: 18px; }
+body[data-public-icons] .button-small > .public-icon { width: 16px; height: 16px; }
+body[data-public-icons] .text-link > .public-icon { width: 18px; height: 18px; }
+body[data-public-icons] .note-icon > .public-icon,
+body[data-public-icons] .check-icon > .public-icon { width: 22px; height: 22px; }
+body[data-public-icons] .sample-event-link > .public-icon { width: 14px; height: 14px; }
+body[data-public-icons] .ad-identity > .ad-more { width: 18px; height: 18px; }
+body[data-public-icons] .line-icon { width: 40px; height: 40px; }
+body[data-public-icons] .format-tabs button { display: inline-flex; justify-content: center; align-items: center; gap: 7px; }
+body[data-public-icons] .format-tabs button > .public-icon { width: 18px; height: 18px; }
+body[data-public-icons] .format-number > .public-icon,
+body[data-public-icons] .step-label > .public-icon { width: 20px; height: 20px; color: var(--blue); }
+body[data-public-icons] .check-list li::before { content: none; }
+body[data-public-icons] .check-list li > .public-icon { position: absolute; top: 3px; left: 0; width: 16px; height: 16px; color: var(--blue); }
+body[data-public-icons] .carousel-controls button > .public-icon { width: 20px; height: 20px; }
+body[data-public-icons] .creative-icon { width: 64px; height: 64px; }
+body[data-public-icons] .cta-example > .public-icon { width: 35px; height: 35px; padding: 9px; border-radius: 50%; background: #e3eaf7; }
+body[data-public-icons] .plan-heading > .public-icon { width: 28px; height: 28px; color: var(--blue); }
+body[data-public-icons] .brief-heading > .public-icon { width: 21px; height: 21px; color: var(--blue); }
+body[data-public-icons] .disclosure-icon > .public-icon { width: 20px; height: 20px; }
+body[data-public-icons] .contact-expectation > .line-icon { width: 33px; height: 33px; }
+
+@media (min-width: 701px) and (max-width: 950px) {
+body[data-public-icons] .local-nav { gap: 15px; }
+body[data-public-icons] .local-links { gap: 15px; }
+body[data-public-icons] .local-links a { column-gap: 5px; }
+body[data-public-icons] .local-links .public-icon { width: 14px; height: 14px; }
+body[data-public-icons] .local-nav .button-small { padding-inline: 13px; }
+}
+
+@media (max-width: 700px) {
+body[data-public-icons] .global-links { gap: 15px; }
+body[data-public-icons] .global-links a { column-gap: 5px; }
+body[data-public-icons] .global-links .public-icon { width: 14px; height: 14px; }
+body[data-public-icons] .local-links a { column-gap: 10px; }
+body[data-public-icons] .local-nav .button-small { column-gap: 7px; }
+body[data-public-icons] .product-name { column-gap: 7px; }
+body[data-public-icons] .product-name > .public-icon { width: 20px; height: 20px; }
+  body[data-public-icons] .goal-card > .line-icon { width: 34px; height: 34px; }
+}
+
+@media (max-width: 480px) {
+body[data-public-icons] .format-tabs button { column-gap: 6px; }
+body[data-public-icons] .format-tabs button > .public-icon { width: 16px; height: 16px; }
+body[data-public-icons] .eyebrow { column-gap: 7px; }
+body[data-public-icons] .eyebrow > .public-icon { width: 18px; height: 18px; }
+  body[data-public-icons] .goal-card > .line-icon { width: 30px; height: 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+body[data-public-icons] .nav-toggle svg,
+body[data-public-icons] .disclosure-icon { transition: none; }
+}

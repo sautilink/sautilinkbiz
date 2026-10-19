@@ -41,6 +41,14 @@ Use case: ads-marketing. Asset type: original product photo displayed inside cle
 
 Use case: photorealistic-natural. Asset type: original photograph displayed inside clearly labelled illustrative advertising previews on SautiLink Business, a refined light iOS-style website. Create a candid contemporary creative-workshop scene with three fictional East African adults naturally collaborating at a pale wood table in a bright modern studio: a woman with short natural hair showing a color/material sample to a man and another woman, relaxed engaged expressions, authentic everyday smart-casual clothing in cream, charcoal and a restrained cobalt-blue accent. A closed unbranded laptop, blank sketch paper, a simple notebook and several material samples on the table. Warm soft daylight through a large window, neutral cream walls, restrained decor, polished editorial lifestyle photography with natural skin and fabric textures. Wide 3:2 composition at 1536x1024 with the people and collaboration grouped near the center, enough breathing space for square and portrait crops. No location landmarks, no flags, no text, no signs, no brand logos, no watermark, no UI, no charts, no testimonial implication. This is a single photograph, not a collage.
 
+## Public animated icons
+
+The Business page uses the shared SautiLink public icon assets in `assets/public-icons/`, pinned to AnimateIcons vanilla 0.1.0 and its Huge icon collection. Real resting SVG geometry is included in the HTML so navigation, cards, disclosures and actions retain their icons without JavaScript. The original SautiLink logo is retained.
+
+The shared adapter enhances only the explicit `data-public-icon` symbols inside the page's `data-public-icons` boundary. It supports hover and keyboard focus, respects reduced motion and stops animations for hidden or offscreen content. Icons are decorative alongside visible wording; icon-only controls keep their existing accessible names. `assets/business-icons.css` handles only the Business page's icon sizing and spacing.
+
+This presentation update preserves the inquiry form markup, Formspree endpoint, field contracts, public copy, navigation targets and existing interface behavior. Licensing and upstream provenance are retained beside the shared icon assets.
+
 ## Validation
 
 The existing brand guard checks the self-hosted Inter assets and shared brand tokens. New UI behavior checks exercise the format selector, carousel, brief controls, mobile navigation and the inquiry form with stubbed responses; they do not send real inquiries. Verify that every referenced asset exists and that responsive image sources decode before publication.
