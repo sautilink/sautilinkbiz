@@ -49,6 +49,10 @@ The shared adapter enhances only the explicit `data-public-icon` symbols inside 
 
 This presentation update preserves the inquiry form markup, Formspree endpoint, field contracts, public copy, navigation targets and existing interface behavior. Licensing and upstream provenance are retained beside the shared icon assets.
 
+## Built-in dropdowns
+
+`assets/public-select.js` and `assets/public-select.css` provide the shared SautiLink dropdown presentation inside the `data-public-selects` boundary. `assets/business-selects.css` matches the inquiry's existing white fields and readable 16px control text. The original advertising-format select, its label, all six option values and the Formspree form remain unchanged. Without JavaScript, the native select remains available. Existing format links and form resets continue to use that native field as the source of truth.
+
 ## Validation
 
 The existing brand guard checks the self-hosted Inter assets and shared brand tokens. New UI behavior checks exercise the format selector, carousel, brief controls, mobile navigation and the inquiry form with stubbed responses; they do not send real inquiries. Verify that every referenced asset exists and that responsive image sources decode before publication.
